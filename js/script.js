@@ -24,11 +24,9 @@ const imgArray = [
     './img/imgSC.jpeg',
     './img/imgSD.jpeg',
 ];
-console.log("these are the images",imgArray);
 
 // set the first image
 mySlide[0].src = imgArray[imgIndex];
-console.log("this is the first image", mySlide[0].src);
 
 // next image
 btnNext.addEventListener('click', () => {
@@ -49,4 +47,28 @@ btnPrev.addEventListener('click', () => {
     mySlide[0].src = imgArray[imgIndex];
     console.log("You have digit with the button prev this image", mySlide[0].src);
 });
+
+
+// thumb img 
+const myThumb = document.getElementsByClassName('myThumb');
+
+// array of myThumb img  
+const myThumbSrc = [
+    './img/imgKB.jpeg',
+    './img/imgLJ.jpeg',
+    './img/imgMJ.jpeg',
+    './img/imgSC.jpeg',
+    './img/imgSD.jpeg',
+];
+
+// loop to change the img with the same img of mythumb img clicked
+for (let i = 0; i < myThumb.length; i++) {
+    myThumb[i].addEventListener('click', () => {
+        mySlide[0].src = myThumbSrc[i];
+        console.log("Digiting on the thumb images you, have selected this image", mySlide[0].src);
+    });
+}
+
+
+
 
