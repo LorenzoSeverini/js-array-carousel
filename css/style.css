@@ -29,15 +29,15 @@ h1 {
     width: 100%;
     height:calc(100vh - 6.25rem); 
     display: flex;
-    justify-content: space-around;
     align-items: center;
 }   
 
 #myslider {
-    width: 50%;
+    width: 80%;
     height: 50%;
     overflow: hidden;
     position: relative;
+    display: flex;
 }
 
 .myslide {
@@ -47,8 +47,41 @@ h1 {
     object-fit: contain;
     object-position: center;
     position: absolute;
+    cursor: pointer;
 }
 
 .hidden {
     display: none;
 }
+
+#mythumbnail {
+    height: calc(100% / 5);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mythumb {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ #mythumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    cursor: pointer;
+} 
+
+#mythumbnail img:hover {
+    border: 2px solid rgba(54, 51, 45, 0.295);
+}
+
+#mythumbnail img.active {
+    border: 2px solid rgba(54, 51, 45, 0.295);
+}
+
+

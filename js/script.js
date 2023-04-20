@@ -50,4 +50,3 @@ btnPrev.addEventListener('click', () => {
     console.log("You have digit with the button prev this image", mySlide[0].src);
 });
 
-
